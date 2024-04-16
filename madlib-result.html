@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mad Lib Result</title>
+    <!-- Add your styles here -->
+</head>
+<body>
+    <div id="madlibResult">
+        <!-- The Mad Lib result will be displayed here -->
+    </div>
+    <script>
+        // Parse the query string to get the Mad Lib results
+        const urlParams = new URLSearchParams(window.location.search);
+        const madLibResult = urlParams.get('result');
+
+        // Decode and display the Mad Lib result
+        document.getElementById('madlibResult').textContent = decodeURIComponent(madLibResult);
+    </script>
+</body>
+</html>
